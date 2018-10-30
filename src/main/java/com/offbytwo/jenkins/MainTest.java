@@ -26,6 +26,7 @@ public class MainTest {
 
         Map<String, Job> jm = jenkinsServer.getJobs("platform-test");
 
+
 //       / JobWithDetails jobWithDetails = jenkinsServer.getJob("pf_test_deploy_ops-auth-api");
 
         Job job = jm.get("pf_test_deploy_ops-auth-api");
@@ -42,6 +43,8 @@ public class MainTest {
         //JSONUtils.beautyPrint(jm);
         optional.get().details();
         JSONUtils.beautyPrint(optional.get());
+        jenkinsServer.getJob("").build();
+
         //   JSONUtils.beautyPrint(jobWithDetails);
 
     }
